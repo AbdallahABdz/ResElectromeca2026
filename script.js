@@ -1,4 +1,4 @@
-(function () {
+function () {
   const CYCLE_ORDER = ["Ingénieur", "Licence", "Master"];
 
   const root = document.getElementById("cards-root");
