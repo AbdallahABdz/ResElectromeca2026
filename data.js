@@ -90,8 +90,8 @@ const NIVEAUX = [
     "globale": "pdfs/l2-aut/globale.pdf"
   },
   {
-    "id": "l2-Automatique",
-    "label": "L2 Automatique",
+    "id": "l2-Automobile",
+    "label": "L2 Automobile",
     "cycle": "Licence",
     "semesters": [
       {
