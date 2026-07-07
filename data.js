@@ -73,7 +73,7 @@ const NIVEAUX = [
   },
   {
     "id": "l2-aut",
-    "label": "L2 Automatique (Aut)",
+    "label": "L2 Automobile (Aut)",
     "cycle": "Licence",
     "semesters": [
       {
@@ -90,7 +90,7 @@ const NIVEAUX = [
     "globale": "pdfs/l2-aut/globale.pdf"
   },
   {
-    "id": "l2-Automobile",
+    "id": "l2-automobile",
     "label": "L2 Automobile",
     "cycle": "Licence",
     "semesters": [
@@ -145,7 +145,7 @@ const NIVEAUX = [
   },
   {
     "id": "l3-aut",
-    "label": "L3 Automatique",
+    "label": "L3 Automobile",
     "cycle": "Licence",
     "semesters": [
       {
@@ -199,7 +199,7 @@ const NIVEAUX = [
   },
   {
     "id": "m1-aut",
-    "label": "M1 Automatique",
+    "label": "M1 Automobile",
     "cycle": "Master",
     "semesters": [
       {
@@ -271,7 +271,7 @@ const NIVEAUX = [
   },
   {
     "id": "m2-aut",
-    "label": "M2 Automatique",
+    "label": "M2 Automobile",
     "cycle": "Master",
     "semesters": [
       {
