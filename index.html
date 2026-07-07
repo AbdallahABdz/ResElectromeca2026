@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Résultats des Délibérations 2025/2026 — Département d'Électromécanique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-inner">
+    <p class="eyebrow">Université Mohamed El Bachir El Ibrahimi &nbsp;·&nbsp; Bordj Bou Arréridj</p>
+    <h1>Département d'Électromécanique</h1>
+    <p class="subtitle">Résultats des délibérations — Année universitaire 2025/2026</p>
+
+    <div class="search-slip">
+      <label for="search">Rechercher un niveau</label>
+      <input id="search" type="text" placeholder="ex. M2 ELM, L3 Aut, 3ème ING…" autocomplete="off">
+    </div>
+  </div>
+</header>
+
+<main id="cards-root"></main>
+
+<p id="empty-state" class="empty-state" hidden>Aucun niveau ne correspond à cette recherche.</p>
+
+<footer class="site-foot">
+  <p>Résultats fournis à titre indicatif — se référer aux affichages officiels du département en cas de doute.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* ===========================================================
+   Tokens
+   =========================================================== */
+:root{
+  --ink:        #14213D;   /* deep academic navy — page background */
+  --ink-2:      #1C2C4C;   /* slightly lighter navy, panels on dark */
+  --paper:      #F4F1E8;   /* parchment — card background */
+  --paper-2:    #ECE7D8;   /* darker parchment for recessed rows */
+  --paper-line: #DCD3B8;   /* hairline on parchment */
+  --brass:      #B8872E;   /* accent — tabs, semester codes, dividers */
+  --brass-dim:  #8F6A24;
+  --garnet:     #7A2530;   /* accent — official / global result action */
+  --garnet-dim: #5E1D26;
+  --text-on-paper:   #241C10;
+  --text-on-paper-soft: #5C5540;
+  --text-on-ink:     #F4F1E8;
+  --text-on-ink-soft:#AEB8CE;
+
+  --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans:  "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --mono:  "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius: 3px;
+}
+
+*{ box-sizing: border-box; }
+
+html{ background: var(--ink); }
+
+body{
+  margin:0;
+  background: var(--ink);
+  color: var(--text-on-ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================================================
+   Header
+   =========================================================== */
+.site-head{
+  background:
+    radial-gradient(1200px 420px at 12% -10%, rgba(184,135,46,0.16), transparent 60%),
+    var(--ink);
+  border-bottom: 1px solid rgba(184,135,46,0.35);
+  padding: 56px 24px 40px;
+}
+
+.head-inner{ max-width: 1040px; margin: 0 auto; }
+
+.eyebrow{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0 0 18px;
+}
+
+.site-head h1{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.1;
+  margin: 0 0 10px;
+  color: var(--text-on-ink);
+}
+
+.subtitle{
+  margin: 0 0 30px;
+  color: var(--text-on-ink-soft);
+  font-size: 15px;
+}
+
+.search-slip{
+  max-width: 460px;
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 10px 16px 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.search-slip label{
+  display:block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-on-paper-soft);
+  margin-bottom: 4px;
+}
+
+.search-slip input{
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-bottom: 1px dashed var(--paper-line);
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--text-on-paper);
+  padding: 4px 0 6px;
+  outline: none;
+}
+.search-slip input:focus{
+  border-bottom: 1px solid var(--brass-dim);
+}
+.search-slip input::placeholder{ color: #A99F80; }
+
+/* ===========================================================
+   Main / cycle dividers / grid
+   =========================================================== */
+main{
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 46px 24px 20px;
+}
+
+.cycle-block{ margin-bottom: 42px; }
+.cycle-block:last-child{ margin-bottom: 8px; }
+
+.cycle-tab{
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  background: var(--brass);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  padding: 7px 18px 8px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin: 0 0 -1px 6px;
+}
+.cycle-tab .count{
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(20,33,61,0.65);
+}
+
+.cycle-panel{
+  border-top: 1px solid rgba(184,135,46,0.4);
+  padding-top: 22px;
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+  gap: 18px;
+}
+
+/* ===========================================================
+   Niveau card — "index card" motif
+   =========================================================== */
+.niveau-card{
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  color: var(--text-on-paper);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 22px rgba(0,0,0,0.28);
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  animation: card-in .38s ease backwards;
+}
+
+@keyframes card-in{
+  from{ opacity: 0; transform: translateY(6px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.niveau-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 16px 30px rgba(0,0,0,0.34);
+}
+
+.card-code{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--brass-dim);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.card-title{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 0 0 14px;
+  color: var(--text-on-paper);
+}
+
+.sem-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-top: 1px dotted var(--paper-line);
+}
+.sem-row:first-of-type{ border-top: 1px solid var(--paper-line); }
+
+.sem-tag{
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-2);
+  background: var(--paper-2);
+  border-radius: 2px;
+  padding: 2px 7px;
+  min-width: 30px;
+  text-align: center;
+  flex: none;
+}
+
+.sem-links{
+  display: flex;
+  gap: 14px;
+  flex: 1;
+}
+
+.sem-links a{
+  font-size: 13.5px;
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--brass-dim);
+  padding-bottom: 1px;
+}
+.sem-links a:hover{ color: var(--garnet); border-bottom-color: var(--garnet); }
+
+.globale-btn{
+  margin-top: 14px;
+  display: block;
+  text-align: center;
+  background: var(--garnet);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  transition: background .15s ease;
+}
+.globale-btn:hover{ background: var(--garnet-dim); }
+
+/* ===========================================================
+   Empty state / footer
+   =========================================================== */
+.empty-state{
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 10px 24px 40px;
+  color: var(--text-on-ink-soft);
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.site-foot{
+  border-top: 1px solid rgba(184,135,46,0.25);
+  padding: 22px 24px 40px;
+  text-align: center;
+}
+.site-foot p{
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--text-on-ink-soft);
+  font-size: 12.5px;
+}
+
+/* ===========================================================
+   Accessibility
+   =========================================================== */
+a:focus-visible, input:focus-visible{
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .niveau-card{ animation: none; }
+  .niveau-card, .globale-btn{ transition: none; }
+}
+
+@media (max-width: 480px){
+  .site-head{ padding: 40px 18px 30px; }
+  main{ padding: 34px 18px 10px; }
+}
