@@ -199,7 +199,7 @@ const NIVEAUX = [
   },
   {
     "id": "m1-aut",
-    "label": "M1 Automobile",
+    "label": "M1 Automatique",
     "cycle": "Master",
     "semesters": [
       {
