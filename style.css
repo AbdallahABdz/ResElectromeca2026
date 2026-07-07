@@ -216,18 +216,46 @@ main{
 
 .sem-links{
   display: flex;
-  gap: 14px;
+  gap: 8px;
   flex: 1;
+  flex-wrap: wrap;
 }
 
 .sem-links a{
-  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
   color: var(--ink-2);
   text-decoration: none;
-  border-bottom: 1px dotted var(--brass-dim);
-  padding-bottom: 1px;
+  background: var(--paper-2);
+  border: 1px solid var(--paper-line);
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: background .14s ease, border-color .14s ease, color .14s ease, transform .14s ease;
 }
-.sem-links a:hover{ color: var(--garnet); border-bottom-color: var(--garnet); }
+
+.sem-links a::before{
+  content: "";
+  width: 7px;
+  height: 9px;
+  flex: none;
+  background: var(--brass-dim);
+  clip-path: polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%);
+  opacity: .7;
+}
+
+.sem-links a:hover{
+  color: var(--paper);
+  background: var(--brass-dim);
+  border-color: var(--brass-dim);
+  transform: translateY(-1px);
+}
+.sem-links a:hover::before{ background: var(--paper); opacity: 1; }
+
+.sem-links a:active{ transform: translateY(0); }
 
 .globale-btn{
   margin-top: 14px;

@@ -73,7 +73,7 @@ const NIVEAUX = [
   },
   {
     "id": "l2-aut",
-    "label": "L2 Automobile (Aut)",
+    "label": "L2 Automatique (Aut)",
     "cycle": "Licence",
     "semesters": [
       {
@@ -145,7 +145,7 @@ const NIVEAUX = [
   },
   {
     "id": "l3-aut",
-    "label": "L3 Automobile",
+    "label": "L3 Automatique",
     "cycle": "Licence",
     "semesters": [
       {
@@ -271,7 +271,7 @@ const NIVEAUX = [
   },
   {
     "id": "m2-aut",
-    "label": "M2 Automobile",
+    "label": "M2 Automatique",
     "cycle": "Master",
     "semesters": [
       {
